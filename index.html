@@ -9,8 +9,7 @@
 </head>
 
   <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="assets/eppeye_logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
@@ -22,7 +21,7 @@
                 <div class="collapse navbar-collapse ms-auto" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">About</a>
+                            <a class="nav-link" href="#how-it-works">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Testimonials</a>
@@ -41,10 +40,8 @@
                 </div>
             </div>
           </nav>
-    </header>
 
-    <body> 
-        <div class="hero-section">
+        <div class="hero-section panel" data-color="gradient">
             <div class="hero main-container">
                 <div class="hero-text">
                     <h5>Empowering safer worksites with AI-driven monitoring.</h3>
@@ -61,8 +58,44 @@
                 </div>
             </div>
         </div>
-    </body>
 
+        <div class="how-it-works-section panel" id="how-it-works" data-color="orange">
+            <div class="how-it-works main-container column">
+                <h1>How it works</h1>
+                <p>Our system uses advanced computer vision to monitor multiple areas in real time, ensuring that workers are always wearing their personal protective equipment (PPE).</p>
+                <div class="features">
+                    <div class="feature-item">
+                        <img src="/assets/camera.png" alt="Monitor in Real Time">
+                        <h3>Monitor in Real Time</h3>
+                        <p>Set up cameras across your site to get instant feedback on safety compliance.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="/assets/mobile.png" alt="Mobile Access">
+                        <h3>Mobile Access</h3>
+                        <p>Supervisors can monitor workers remotely through our mobile app, getting updates no matter where they are.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="/assets/alert.png" alt="Configurable Alerts">
+                        <h3>Configurable Alerts</h3>
+                        <p>Customize the alerts you want to receive when workers are missing essential gear like helmets, vests, or gloves.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="/assets/report.png" alt="Weekly Reports">
+                        <h3>Weekly Reports</h3>
+                        <p>Access reports and historical data through our mobile app.</p>
+                    </div>
+                </div>
+             
+                <button class="cta-button">Start monitoring today!</button>
+              
+            </div>
+        </div>
+        
+
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="script.js"></script>
+</body>
+
 </html>
