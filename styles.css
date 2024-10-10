@@ -1,0 +1,219 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: transparent !important;
+    align-items: center !important;
+    position: fixed !important;
+    width: 100% !important;
+    transition: all 0.5s ease;
+}
+
+.container-fluid {
+    margin: 0 8rem !important;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    margin: 0 0 !important;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.nav-item{
+    padding-left: 30px !important;
+
+}
+
+.nav-link {
+    color: white !important;
+    position: relative;
+    transition: all 0.5s ease !important; 
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    bottom: -2px; 
+    transition: all 0.5s ease; 
+}
+
+.nav-link:hover::after {
+    width: 100%; 
+    transition: all 0.5s ease; 
+}
+
+.nav-link:hover {
+    transform: translateY(-2px); 
+    transition: all 0.5s ease; 
+}
+
+.collapse {
+    margin-left: auto !important;
+}
+
+.navbar-collapse{
+    flex-grow: 0 !important;
+}
+
+.btn {
+    padding: 5px 25px !important;
+    margin-left: 30px !important;
+    justify-self: center !important;
+    transition: all 0.5s ease; 
+}
+
+.btn:hover {
+    color: #B13D13 !important;
+    transition: all 0.5s ease; 
+}
+
+/* Navbar - Animación al colapsar */
+
+.show .nav-link {
+    transition: none !important; 
+}
+
+.show .nav-link::after {
+    transition: none !important; 
+}
+
+.show .nav-link:hover::after {
+    width: 0;
+}
+
+.show .nav-link:hover {
+    transform: none; 
+}
+
+.show .btn{
+    margin-left: 0 !important;
+}
+
+
+/* Hero section */
+
+.hero-section{
+    display: flex;
+    background: linear-gradient(to bottom, #FD8356, #B13D13);
+    color: white;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main-container{
+    padding: 5rem 25rem !important; 
+    max-width: 1800px;
+    height: 100%;
+}
+
+.hero-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.hero-button{
+    height: 2.5rem;
+    transition: all 0.5s ease; 
+}
+
+.hero-button:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease; 
+    cursor: pointer;
+}
+
+.hero-image{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.hero-image img{
+    width: auto;
+    height: 50%;
+    transition: all 0.5s ease;
+}
+
+.hero-image img:hover{
+    transform: scale(1.05) rotate(3deg);
+    transition: all 0.5s ease;
+}
+
+
+@media screen and (max-width: 1700px){
+
+    .main-container{
+        max-width: 1400px;
+        padding: 5rem 10rem !important; 
+    }
+    
+}
+
+@media screen and (max-width: 991px){
+    
+    .hero-section{
+        height: fit-content;
+    }
+
+    .container-fluid{
+        margin: 0 6rem !important;
+    }
+
+    .main-container{
+        padding: 6rem 6rem !important; 
+        flex-direction: column;
+    }
+    
+    .hero-image img{
+        margin-top: 30px;
+        width: auto;
+        max-height: 400px;  
+    }
+
+}
+
+
+
+@media screen and (max-width: 700px){
+    
+    .container-fluid {
+        margin: 0 2rem !important;
+    }
+
+    .main-container{
+        padding: 6rem 3rem !important; 
+        flex-direction: column;
+        
+    }
+    
+}
