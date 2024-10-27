@@ -516,6 +516,68 @@ body {
     transition: all 0.5s ease;
 }
 
+/*Footer*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #B13D13;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 1rem; /* Añadido padding general para el footer */
+}
+
+.footer h5 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem 0; /* Solo margen vertical */
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .border-white {
+    border-color: #ffffff;
+    margin: 1.5rem 0;
+}
+
+.footer .fab{
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #ffffff;
+}
+
+.footer .bi {
+    font-size: 1.5rem;
+    margin: 0 ;
+    color: #ffffff;
+}
+
+.footer img {
+    border-radius: 50%;
+}
+
+.text-white{
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
 @media screen and (max-width: 1700px){
 
     .main-container{
@@ -527,6 +589,9 @@ body {
 
 @media screen and (max-width: 1050px){
 
+    .plans, .plans-cards{
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 991px){
