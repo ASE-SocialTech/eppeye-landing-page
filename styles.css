@@ -5,30 +5,16 @@ html, body{
     transition: background-color 1s ease; 
 }
 
-/*
 body {
     color: #4F4F4F;
-}
-
-.color-gradient{
-    background: linear-gradient(to bottom, #FD8356, #B13D13);
-    transition: background 1s ease;
-}
-
-.color-white{
-    background: white;
-    transition: background 1s ease;
-}
-
-*/
-
-body {
-    color: #4F4F4F;
-    position: relative;
+    position: relative; 
+    overflow-x: hidden; 
 }
 
 .color-gradient {
-    background-color: #FD8356; 
+    background: linear-gradient(to bottom, #FD8356, #B13D13);
+    background-attachment: fixed; 
+    transition: background 1s ease;
 }
 
 .color-gradient::before {
@@ -39,6 +25,8 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, #FD8356, #B13D13); 
+        background-attachment: fixed; 
+
     z-index: -1;
     transition: opacity 1s ease; 
     opacity: 0; 
@@ -47,6 +35,7 @@ body {
 .color-gradient.active::before {
     opacity: 1; 
 }
+
 
 .color-orange{
     background: #FFE5DB;
@@ -60,6 +49,7 @@ body {
 .row{
     display: flex;
     flex-direction: row !important;
+    width: 100%;
 }
   
 /* Navbar */
@@ -187,6 +177,7 @@ body {
     padding: 5rem 25rem !important; 
     max-width: 1800px;
     height: 100%;
+    align-self: center;
 }
 
 .hero-buttons{
@@ -516,7 +507,267 @@ body {
     transition: all 0.5s ease;
 }
 
+/* Testimonials Section */
+
+.testimonials-section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.testimonials{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto; 
+    gap: 2rem;       
+}
+
+.testimonials-text h2{
+    color: #B13D13;
+ 
+}
+
+.section-title-testimonials {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #5A9BD4;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.carousel-inner {
+    max-width: 800px;
+    padding: 40px;
+}
+
+
+.testimonial {
+    width: 100%; 
+    height:  400px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.testimonial-group {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-image {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: #4F4F4F;
+    font-size: small;
+}
+
+.testimonial h4 {
+    font-size: 1.5rem;
+    color: #1C2D3D;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    color: #4F4F4F;
+    margin-bottom: 10px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.testimonial span {
+    font-size: 1rem;
+    color: #959595;
+    margin-top: 10px;
+    display: block;
+    font-weight: 500;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #B13D13;
+    border-radius: 50%;
+    padding: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #4F4F4F; 
+}
+
+/*Team*/
+
+.team-section{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.team{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto; 
+    gap: 2rem;       
+}
+
+
+.team-text,
+.team-text p{
+    color: #B13D13;
+}
+
+.team-intro {
+    margin-bottom: 30px;
+}
+
+.team-intro .description {
+    font-size: 1rem;
+    color: #4F4F4F;
+    line-height: 1.6;
+    margin-right: 150px;
+}
+
+.team-members {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.team-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-info {
+    flex-grow: 1;
+}
+
+.member-info h4 {
+    font-size: 1.1rem;
+    color: #4F4F4F;
+    margin-bottom: 5px;
+}
+
+.member-info p {
+    font-size: 0.9rem;
+    color: #4F4F4F;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Contact */
+
+.contact-section{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    margin: 20px 0;
+}
+
+.contact-text p{
+    text-align: center; 
+    align-self: center;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact .card {
+    margin: 10px;
+    box-shadow: 3px 3px 9.1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border: none;
+    padding: 15px;
+    color:  #4F4F4F;
+    transition: all 0.3s;
+    width: 18rem;
+}
+
+.contact h3{
+    text-align: center;
+    color: #B13D13;
+}
+
+.contact .card-text{
+    text-align: center;
+}
+
 /*Footer*/
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #B13D13;
+    color: white;
+    width: 100%;
+}
 
 .footer {
     display: flex;
@@ -572,10 +823,9 @@ body {
 
 .icons{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: flex-start;
-    gap: 10px;
 }
 
 @media screen and (max-width: 1700px){
@@ -590,6 +840,10 @@ body {
 @media screen and (max-width: 1050px){
 
     .plans, .plans-cards{
+        flex-direction: column;
+    }
+
+    .contact-info{
         flex-direction: column;
     }
 }
@@ -632,6 +886,20 @@ body {
         height: auto;
     }
 
+    
+    .icons{
+        justify-content: center;
+    }
+
+    .col-lg-6 {
+        align-items: center; 
+        text-align: center;
+    }
+
+    .team-intro .description{
+        margin-right: 0;
+    }
+
 }
 
 @media screen and (max-width: 700px){
@@ -666,7 +934,7 @@ body {
         text-align: center;
     }
 
-    h5{
+    h5, .contact h3{
         font-size: 0.9rem;
     }
 
@@ -679,7 +947,11 @@ body {
         margin-bottom: 0;
     }
     
-    .feature-item h3 {
+    .feature-item h3,
+    .testimonial-content p,
+    .testimonial-content span,
+    .team p{
         font-size: 0.9rem;
     }
+
 }
