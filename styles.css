@@ -85,6 +85,22 @@ body {
     transition: all 0.5s ease !important; 
 }
 
+.btn-ver-mas {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-ver-mas:hover {
+  background-color: white;
+  color: black;
+}
+
 .nav-link::after {
     content: '';
     position: absolute;
